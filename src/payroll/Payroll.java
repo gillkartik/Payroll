@@ -25,6 +25,22 @@ public class Payroll
             emp=givenUser;
                  
         }
+
+    Payroll() {
+        
+    }
+
+    public void setSalary(double Salary) {
+        this.Salary = Salary;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
+    }
+
+    public void setEmp(String emp) {
+        this.emp = emp;
+    }
          /**The method for calculating salary including bonus.Bonus is 10% of salary 
       */ 
         
@@ -52,5 +68,18 @@ public class Payroll
         return emp;
     }
     
-    
+    public double finalSalary() {
+        if(this.Salary<=3000) {
+            this.bonus= this.Salary/10;
+            System.out.println("the bonus is : " + this.bonus );
+        }
+        else {
+            this.bonus=0;
+        }
+        double finalSalary = this.Salary + this.bonus;
+        System.out.println("the bonus is : " + this.bonus );
+        return finalSalary;
+        
+       
+    }
 }
